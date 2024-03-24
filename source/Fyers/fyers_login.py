@@ -20,8 +20,8 @@ Once you have created an APP you can start using the below SDK
 1. Input parameters
 """
 redirect_uri= "https://www.google.com"  ## redircet_uri you entered while creating APP.
-client_id = "VCJQ34RJHX-100"                                          ## Client_id here refers to APP_ID of the created app
-secret_key = "1KWZHF78WU"                                           ## app_secret key which you got after creating the app
+client_id = "K3YDUPM9RH-100"                                          ## Client_id here refers to APP_ID of the created app
+secret_key = "5FJCI3820C"                                           ## app_secret key which you got after creating the app
 grant_type = "authorization_code"                  ## The grant_type always has to be "authorization_code"
 response_type = "code"                             ## The response_type always has to be "code"
 state = "sample"                                   ##  The state field here acts as a session manager. you will be sent with the state field after successfull generation of auth_code
