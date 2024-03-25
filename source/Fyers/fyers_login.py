@@ -1,6 +1,7 @@
 from fyers_apiv3 import fyersModel
 import webbrowser
 import configparser
+import os
 
 """
 In order to get started with Fyers API we would like you to do the following things first.
@@ -18,7 +19,8 @@ Once you have created an APP you can start using the below SDK
 #Change the log path
 
 config = configparser.ConfigParser()
-configFilePath = r'D:\xxx\Proj\AutoTrade\source\config.ini'
+configFilePath = './source/config.ini'
+mypath = os.path.abspath(configFilePath)
 config.read(configFilePath)
 
 """

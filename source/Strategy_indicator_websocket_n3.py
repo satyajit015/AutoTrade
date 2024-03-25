@@ -96,8 +96,8 @@ nuvama_broker = 0
 icici_broker = 0
 angel_broker = 0
 alice_broker = 0
-fyers_broker = 0
-zerodha_broker = 1
+fyers_broker = 1
+zerodha_broker = 0
 upstox_broker = 0
 
 importLibrary()
