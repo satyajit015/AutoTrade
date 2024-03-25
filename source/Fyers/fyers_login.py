@@ -1,5 +1,6 @@
 from fyers_apiv3 import fyersModel
 import webbrowser
+import configparser
 
 """
 In order to get started with Fyers API we would like you to do the following things first.
@@ -16,15 +17,22 @@ Once you have created an APP you can start using the below SDK
 #pip uninstall fyers_api
 #Change the log path
 
+config = configparser.ConfigParser()
+configFilePath = r'D:\xxx\Proj\AutoTrade\source\config.ini'
+config.read(configFilePath)
+
+
 """
 1. Input parameters
 """
 redirect_uri= "https://www.google.com"  ## redircet_uri you entered while creating APP.
-client_id = "K3YDUPM9RH-100"                                          ## Client_id here refers to APP_ID of the created app
-secret_key = "5FJCI3820C"                                           ## app_secret key which you got after creating the app
+#client_id = "K3YDUPM9RH-100"                                          ## Client_id here refers to APP_ID of the created app
+#secret_key = "5FJCI3820C"                                           ## app_secret key which you got after creating the app
 grant_type = "authorization_code"                  ## The grant_type always has to be "authorization_code"
 response_type = "code"                             ## The response_type always has to be "code"
 state = "sample"                                   ##  The state field here acts as a session manager. you will be sent with the state field after successfull generation of auth_code
+client_id = config.get('account', 'client_id')
+secret_key = config.get('account', 'secret_key')
 
 
 ### Connect to the sessionModel object here with the required input parameters
